@@ -29,35 +29,27 @@ const typing = document.getElementById("typing");
 let index = 0;
 
 function typeWriter() {
-
     if (index < text.length) {
-
         typing.innerHTML += text.charAt(index);
-
         typing.scrollTop = typing.scrollHeight;
-
         index++;
-
         setTimeout(typeWriter, 75);
-
     }
-
 }
 
 window.onload = () => {
-
     setTimeout(typeWriter, 800);
+};
 
+// BUTTONS
+document.getElementById("iloveyou").onclick = function () {
+    alert("I LOVE YOU TOO ❤️");
 };
 
 document.getElementById("yes").onclick = function () {
-
     window.location.href = "success.html";
-
 };
 
 document.getElementById("no").onclick = function () {
-
     alert("I really hope you'll share your feelings with me whenever you're comfortable. ❤️");
-
-}
+};
